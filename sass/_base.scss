@@ -1,0 +1,49 @@
+$default-font-color: rgb(255, 255, 255);
+$button-textcolor: rgb(255, 255, 255);
+
+@mixin mq($size) {
+  @media only screen and(min-width: $size) {
+    @content;
+  }
+}
+@mixin flexData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: $default-font-color;
+  width: 100%;
+  min-height: 100%;
+  @include mq(768px) {
+    font-size: 22px;
+  }
+  @include flexData();
+}
+
+body {
+  padding: 0;
+  background: linear-gradient(rgb(44, 44, 235), rgb(233, 127, 236));
+}
+
+div {
+  @include flexData();
+  height: 50%;
+  width: 70%;
+  max-width: 708px;
+  margin: auto;
+  padding: 25px;
+}
+section {
+  @include flexData();
+}

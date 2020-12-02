@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <div class="location" aria-label="current city" tabindex="0">
+        <h1 class="locationPlace" tabindex="0"></h1>
+      </div>
+
+      <section>
+        <section class="wind">
+          <div class="windTitle" aria-label="wind speed" tabindex="0">wind</div>
+          <div class="windSpeed" tabindex="0"></div>
+        </section>
+
+        <div class="description">
+          <div class="icon" aria-label="image of weather" tabindex="0"></div>
+          <div class="iconDescription" tabindex="0"></div>
+        </div>
+
+        <section class="humidity">
+          <div aria-label="current humidity" tabindex="0">humidity</div>
+          <div class="humidPercent" tabindex="0"></div>
+        </section>
+      </section>
+
+      <section>
+        <section class="low" aria-label="low temperature" tabindex="0">
+          low
+          <div class="lowTemp" tabindex="0"></div>
+          &deg;F
+        </section>
+
+        <div class="temp" aria-label="currentTemp" tabindex="0">
+          <div class="currentTemp" tabindex="0"></div>
+          <div class="degreeTemp" aria-label="Fahrenheits" tabindex="0">
+            &deg;F
+          </div>
+        </div>
+
+        <section class="high" aria-label="high temperature" tabindex="0">
+          high
+          <div class="highTemp" tabindex="0"></div>
+          &deg;F
+        </section>
+      </section>
+
+      <div class="citySearch">
+        <label for="newCity">City Search</label>
+        <input
+          class="newCity"
+          type="text"
+          size="30"
+          autocomplete="off"
+          aria-label="text input"
+          placeholder="Enter city name"
+          tabindex="0"
+        />
+
+        <button
+          id="addCity"
+          class="theButton"
+          value="Search"
+          type="submit"
+          title="Search city"
+          aria-label="Search for city weather"
+        >
+          search
+        </button>
+
+        <button
+          id="saveCity"
+          class="default"
+          value="Save"
+          type="Save"
+          title="save city"
+          aria-label="make current city as default"
+        >
+          make default
+        </button>
+      </div>
+    </main>
+    <script src="api.js"></script>
+  </body>
+</html>
